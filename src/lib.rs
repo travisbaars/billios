@@ -3,3 +3,8 @@
 //! This crate is a collection of soil related data structures and formulae.
 //!
 //!
+//!
+
+mod domain;
+
+mod math;
