@@ -8,7 +8,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! billios = "0.1.0"
+//! billios = "0.1.1"
 //! ```
 //!
 //! Alternatively, this crate can be installed using the `cargo add` command:

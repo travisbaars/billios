@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
-## [Unreleased]
+## `0.1.1` (2024-02-20) [CURRENT]
 
 ### Added
 
@@ -26,11 +26,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `deploy.yml` workflow
 - Add project details to `Cargo.toml`
 
+### Changed
+
+- Changed version number for release
+
 ### Removed
 
 - Remove `resources` directory
 
-## `0.1.0` (2024-02-20) [CURRENT]
+## `0.1.0` (2024-02-20)
 
 ### Added
 

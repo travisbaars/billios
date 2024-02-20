@@ -12,7 +12,7 @@ Standard functionality, no additional dependencies are required:
 
 ```toml
 [dependencies]
-billios = "0.1.0"
+billios = "0.1.1"
 ```
 
 Alternatively, you can install using the `cargo add` command:
