@@ -74,9 +74,9 @@ Coming soon...
 ## Todo
 
 - [x] Implement GitHub Action workflow
-- [ ] Create first deployment to crates.io
+- [x] Create first deployment to crates.io
 - [ ] Improve `README.md`
-  - [ ] Add the build/crates.io/docs badges
+  - [x] Add the build/crates.io/docs badges
 - [ ] Complete documentation
   - [x] Need basic docs atleast for crates.io
   - [ ] `lib.rs` needs attention
