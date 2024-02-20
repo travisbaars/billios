@@ -5,6 +5,6 @@
 //!
 //!
 
-mod domain;
+pub mod domain;
 
-mod math;
+pub mod math;
