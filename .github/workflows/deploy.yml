@@ -2,7 +2,7 @@ name: Deploy to Crates.io
 on:
   push:
     tags:
-      -'*'
+      - '*'
 jobs:
   test:
     name: Build / Test
