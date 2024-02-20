@@ -1,6 +1,11 @@
 [package]
-name = "billios"
+authors = ["Travis Baars <travis@trainland.io>"]
 description = "A soil library"
-license = "MIT"
-version = "0.1.0"
+documentation = "https://docs.rs/billios"
 edition = "2021"
+homepage = "https://github.com/travisbaars/billios"
+license = "MIT"
+name = "billios"
+readme = "README.md"
+repository = "https://github.com/travisbaars/billios"
+version = "0.1.0"

@@ -1,5 +1,9 @@
 # billios - A Soil Library
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/travisbaars/billios/integrate.yml?branch=main&logo=github)
+![Crates.io Version](https://img.shields.io/crates/v/billios)
+![docs.rs](https://img.shields.io/docsrs/billios)
+
 This crate is a collection of soil related data structures and formulae.
 
 ## Installation
@@ -70,15 +74,15 @@ Coming soon...
 ## Todo
 
 - [x] Implement GitHub Action workflow
-- [] Create first deployment to crates.io
-- [] Improve `README.md`
-  - [] Add the build/crates.io/docs badges
-- [] Complete documentation
+- [x] Create first deployment to crates.io
+- [ ] Improve `README.md`
+  - [x] Add the build/crates.io/docs badges
+- [ ] Complete documentation
   - [x] Need basic docs atleast for crates.io
-  - [] `lib.rs` needs attention
-- [] Add `Setter()` methods to calculation structs
-- [] Possibly change choice enums (ex. `SandUsedChoices`) to `SandUsedOption`
-- [] Rework the public API. Namely how things like `domain::types` are accessed
-- [] More calculations?
-- [] Rename `utilities.rs`?
-- [] Rename `calculations.rs` to `field_test.rs`?
+  - [ ] `lib.rs` needs attention
+- [ ] Add `Setter()` methods to calculation structs
+- [ ] Possibly change choice enums (ex. `SandUsedChoices`) to `SandUsedOption`
+- [ ] Rework the public API. Namely how things like `domain::types` are accessed
+- [ ] More calculations?
+- [ ] Rename `utilities.rs`?
+- [ ] Rename `calculations.rs` to `field_test.rs`?
