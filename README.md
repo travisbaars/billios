@@ -65,21 +65,16 @@ Using this formula can a little more complicated than the last example. However 
 
 #### Use with a pre-existing `dry_density` value:
 
-```rust
-use billios::math::calculations::*;
-use billios::domain::types::*;
-
-
-```
+Coming soon...
 
 ## Todo
 
-- [] Implement GitHub Action workflow
+- [x] Implement GitHub Action workflow
 - [] Create first deployment to crates.io
 - [] Improve `README.md`
   - [] Add the build/crates.io/docs badges
 - [] Complete documentation
-  - [] Need basic docs atleast for crates.io
+  - [x] Need basic docs atleast for crates.io
   - [] `lib.rs` needs attention
 - [] Add `Setter()` methods to calculation structs
 - [] Possibly change choice enums (ex. `SandUsedChoices`) to `SandUsedOption`
