@@ -22,6 +22,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add `CHANGELOG.md`
 - Add status badges to `README.md`
+- Add reusable `test.yml` workflow
+- Add `deploy.yml` workflow
+- Add project details to `Cargo.toml`
 
 ### Removed
 
