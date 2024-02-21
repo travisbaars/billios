@@ -1,7 +1,7 @@
 //! Calculations
-use crate::domain::constants::{SAND_DENSITY, SAND_IN_CONE, SPECIFIC_GRAVITY};
 use crate::domain::traits::Rounding;
-use crate::domain::types::{DryDensityChoice, MoistureContentChoice, WetDensityChoice, RockCorrectionChoice};
+use crate::field_test::types::{DryDensityChoice, MoistureContentChoice, WetDensityChoice, RockCorrectionChoice};
+use super::constants::*;
 // use super::utilities::Rounding;
 
 /// Sand used calculation
@@ -9,7 +9,7 @@ use crate::domain::types::{DryDensityChoice, MoistureContentChoice, WetDensityCh
 /// # Example
 ///
 /// ```
-/// use billios::math::calculations::SandUsed;
+/// use billios::field_test::SandUsed;
 ///
 /// let sand_used = SandUsed::new(14.65, 8.75, None);
 /// assert_eq!(2.31, sand_used.calculate());
@@ -74,7 +74,7 @@ impl SandUsed {
 /// # Example
 ///
 /// ```
-/// use billios::math::calculations::WetDensity;
+/// use billios::field_test::WetDensity;
 ///
 /// let wet_density = WetDensity::new(4.65, 2.31, None);
 /// assert_eq!(177.1429, wet_density.calculate());
@@ -137,7 +137,7 @@ impl WetDensity {
 /// # Example
 ///
 /// ```
-/// use billios::math::calculations::MoistureContent;
+/// use billios::field_test::MoistureContent;
 ///
 /// let moisture_content = MoistureContent::new(1600., 1575., 1400.);
 /// assert_eq!(0.14285714, moisture_content.calculate());
@@ -197,8 +197,8 @@ impl MoistureContent {
 /// An example using `WetDensityChoice::Value()` and `MoistureContentChoice::Value()`,
 ///
 /// ```
-/// use billios::math::calculations::DryDensity;
-/// use billios::domain::types::{WetDensityChoice, MoistureContentChoice};
+/// use billios::field_test::DryDensity;
+/// use billios::field_test::types::{WetDensityChoice, MoistureContentChoice};
 ///
 /// let dry_density = DryDensity::new(WetDensityChoice::Value(177.1429), MoistureContentChoice::Value(0.1428571));
 ///
@@ -260,8 +260,8 @@ impl DryDensity {
 /// An example using `DryDensityChoice::Value()`.
 ///
 /// ```
-/// use billios::math::calculations::Compaction;
-/// use billios::domain::types::DryDensityChoice;
+/// use billios::field_test::Compaction;
+/// use billios::field_test::types::DryDensityChoice;
 ///
 /// let compaction = Compaction::new(DryDensityChoice::Value(155.), 135.6);
 /// assert_eq!(114.3, compaction.calculate());
@@ -273,8 +273,8 @@ impl DryDensity {
 /// An example using `DryDensityChoice::Constructor()`.
 ///
 /// ```
-/// use billios::math::calculations::{DryDensity, Compaction};
-/// use billios::domain::types::{DryDensityChoice, WetDensityChoice, MoistureContentChoice};
+/// use billios::field_test::{DryDensity, Compaction};
+/// use billios::field_test::types::{DryDensityChoice, WetDensityChoice, MoistureContentChoice};
 ///
 /// let lab_max = 135.6;
 /// let dry_density = DryDensity::new(WetDensityChoice::Value(177.1429), MoistureContentChoice::Value(0.1428571));
@@ -326,7 +326,7 @@ impl Compaction {
 /// # Example
 ///
 /// ```
-/// use billios::math::calculations::RockCorrection;
+/// use billios::field_test::RockCorrection;
 ///
 /// let left_on_sieve_weight = 100.;
 /// let pre_sieve_rock_correction = 500.;
@@ -382,8 +382,8 @@ impl RockCorrection {
 /// Example using a `RockCorrectionChoice::Value()`.
 ///
 /// ```
-/// use billios::math::calculations::LabMaxCorrection;
-/// use billios::domain::types::RockCorrectionChoice;
+/// use billios::field_test::LabMaxCorrection;
+/// use billios::field_test::types::RockCorrectionChoice;
 ///
 /// let lab_max = 135.6;
 /// let rock_correction = 0.2;
@@ -398,8 +398,8 @@ impl RockCorrection {
 /// Example using a `RockCorrectionChoice::Constructor()`.
 ///
 /// ```
-/// use billios::math::calculations::{LabMaxCorrection, RockCorrection};
-/// use billios::domain::types::RockCorrectionChoice;
+/// use billios::field_test::{LabMaxCorrection, RockCorrection};
+/// use billios::field_test::types::RockCorrectionChoice;
 ///
 /// let lab_max = 135.6;
 /// let left_on_sieve_weight = 100.;

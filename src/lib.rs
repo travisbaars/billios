@@ -28,7 +28,7 @@
 //! #### Use with constant `sand_in_cone` values:
 //!
 //! ```
-//! use billios::math::calculations::*;
+//! use billios::field_test::*;
 //!
 //! let sand_used = SandUsed::new(14.65, 8.75, None);
 //! let result = sand_used.calculate();
@@ -39,3 +39,5 @@
 pub mod domain;
 
 pub mod math;
+
+pub mod field_test;
