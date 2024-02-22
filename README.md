@@ -32,7 +32,7 @@ Simply call the `new()` method with the desired values, then call `calculate()` 
 #### Use with constant `sand_in_cone` value:
 
 ```rust
-use billios::math::calculations::*;
+use billios::field_test::*;
 
 // This constructor  takes 3 arguments:
 //
@@ -55,7 +55,7 @@ assert_eq!(2.31, result);
 #### Use with a custom `sand_in_cone` value:
 
 ```rust
-use billios::math::calculations::*;
+use billios::field_test::SandUsed;
 
 let sand_used = SandUsed::new(14.65, 8.75, Some(3.59));
 let result = sand_used.calculate();
@@ -67,9 +67,37 @@ assert_eq!(2.31, result);
 
 Using this formula can a little more complicated than the last example. However it is still pretty straghtforward.
 
-#### Use with a pre-existing `dry_density` value:
+#### Use with pre-existing `dry_density` and `moisture_content` values:
 
-Coming soon...
+```rust
+use billios::field_test::*;
+
+let wet_density = WetDensityChoice::Value(177.1429);
+let moisture_content = MoistureContentChoice::Value(0.1428571);
+let dry_density = DryDensity::new(wet_density, moisture_content);
+
+let result = dry_density.calculate();
+
+assert_eq!(155., result);
+```
+
+#### Use with `dry_density` and `moisture_content` constructors:
+
+It is not necessary to calculate each of the values.
+
+```rust
+use billios::field_test::*;
+
+let wd = WetDensity::new(4.65, 2.31, None);
+let wet_density = WetDensityChoice::constructor(wd);
+let mc = MoistureContent::new(1600., 1575., 1400.);
+let moisture_content = MoistureContentChoice::constructor(mc);
+
+let dry_density = DryDensity::new(wet_density, moisture_content);
+let result = dry_density.calculate();
+
+assert_eq!(155., result);
+```
 
 ## Todo
 
@@ -82,7 +110,7 @@ Coming soon...
   - [ ] `lib.rs` needs attention
 - [ ] Add `Setter()` methods to calculation structs
 - [ ] Possibly change choice enums (ex. `SandUsedChoices`) to `SandUsedOption`
-- [ ] Rework the public API. Namely how things like `domain::types` are accessed
+- [x] Rework the public API. Namely how things like `domain::types` are accessed
 - [ ] More calculations?
 - [ ] Rename `utilities.rs`?
-- [ ] Rename `calculations.rs` to `field_test.rs`?
+- [x] Rename `calculations.rs` to `field_test.rs`?

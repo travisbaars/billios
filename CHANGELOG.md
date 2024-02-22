@@ -16,6 +16,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 -->
 
+## [Unreleased]
+
+### Added
+
+- Add new `field_test` module which holds all field test related calculations and constants
+
+### Changed
+
+- Move `calculations.rs` from `math` module into the new `field_test` module
+- Move `constants.rs` from `domain` module into the new `field_test` module
+- Move `types.rs` from `domain` module into the new `field_test` module
+- Update paths in `calculations.rs` to reflect moved files
+- Update `README.md` Todo list
+
+### Removed
+
+- Remove unused modules from `math/mod.rs`
+- Remove unused modules from `domain/mod.rs`
+
+
+
 ## `0.1.1` (2024-02-20) [CURRENT]
 
 ### Added
