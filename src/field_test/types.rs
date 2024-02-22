@@ -1,6 +1,6 @@
 //! Types
 
-use crate::math::calculations::{SandUsed, WetDensity, MoistureContent, DryDensity, RockCorrection};
+use super::calculations::*;
 
 #[derive(Debug, Clone, Copy)]
 pub enum SandUsedChoice {
